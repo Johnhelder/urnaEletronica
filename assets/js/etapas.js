@@ -40,9 +40,14 @@ let etapas = [
       {
         numero: 84,
         nome: "Zulano",
-
+        partido: "QWERTY",
+        vice: "Zul",
+        fotos: [
+          {url: "84.jpg", legenda: "Prefeito"},
+          {url: "84_2.jpg", legenda: "Vice-Prefeito", small: true}
+        ]
       
-      }
+      },
     ]
   }
-]
+];
