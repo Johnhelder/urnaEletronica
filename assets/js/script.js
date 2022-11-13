@@ -8,11 +8,17 @@ let lateral = document.querySelector(".d-1-right");
 let numeros = document.queryCommandValue(".d-1-3");
 
 let etapaAtual = 0;
+let numero = '';
 
 function comecarEtapa(){
   let etapa = etapas[etapaAtual];
 
   let numeroHtml = '';
+  let numero = '';
+
+  for(let i=0;i<etapa.numeros;i++){
+    numeroHtml += '<div class="numero pisca"></div>';
+  }
 
   seuVotoPara.style.display = 'none';
   cargo.innerHTML = etapa.titulo;
