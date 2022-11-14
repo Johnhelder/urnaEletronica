@@ -32,8 +32,22 @@ function comecarEtapa(){
 }
 
 function atualizaInterface(){
-alert("Votação concluida!");
+let etapa = etapas[etapaAtual];
+let candidato = etapa.candidatos.filter((item)=>{
+  if(item.numero === numero){
+    return true;
+  }else{
+    return false;
+  }
+});
+ if(candidato.length > 0){
+  candidato = candidato[0];
+  seuVotoPara.style.display = "block";
+  descricao.innerHTML = `Nome: ${candidato.nome}<br/> Partido: ${candidato.partido}`;
+  
+ }
 }
+ 
 
 //Função dos botões do teclado
 function clicou(n){
