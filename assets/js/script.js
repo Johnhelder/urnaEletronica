@@ -82,7 +82,7 @@ function branco(n){
 }
 
 function corrige(n){
-  alert("Clicou em Corrige");
+  comecarEtapa();
 }
 
 function confirma(n){
