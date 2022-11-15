@@ -80,16 +80,14 @@ function clicou(n){
 
 //Funções dos botões de controle
 function branco(){
-  if(numero === ''){
-    votoBranco = true;
+  numero = '';   
+  votoBranco = true;
     seuVotoPara.style.display = 'block';
     aviso.style.display = 'block';
     numeros.innerHTML = '';
     descricao.innerHTML = '<div class="aviso--grande pisca">VOTO EM BRANCO</div>';
-  }else{
-    alert("Para votar em BRANCO, não pode ter digitado nenhum número!");
-  }
-}
+    lateral.innerHTML = '';
+  }  
 
 function corrige(n){
   comecarEtapa();
