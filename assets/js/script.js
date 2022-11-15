@@ -89,12 +89,29 @@ function branco(){
     lateral.innerHTML = '';
   }  
 
-function corrige(n){
+function corrige(){
   comecarEtapa();
 }
 
-function confirma(n){
-  alert("Clicou em confirma");
+function confirma(){
+  let etapa = etapas[etapaAtual];
+  let votoConfirmado = false;
+
+  if(votoBranco === true){
+    votoConfirmado = true;
+    console.log("Confirmando voto em BRANCO...");
+  }else if(numero.length === etapa.numeros){
+    votoConfirmado = true;
+    console.log("Confirmando como "+numero);
+  }
+  if(votoConfirmado){
+    etapaAtual++;
+    if(etapas[etapaAtual] !== undefined){
+      comecarEtapa();
+    }else{
+      console.log("FIM!");
+    }
+  }
 }
 
 comecarEtapa();
