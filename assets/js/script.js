@@ -8,12 +8,14 @@ let numeros = document.querySelector('.d-1-3');
 
 let etapaAtual = 0;
 let numero = '';
+let votoBranco = false;
 
 function comecarEtapa(){
   let etapa = etapas[etapaAtual];
 
   let numeroHtml = '';
   let numero = '';
+  votoBranco = false;
 
   for(let i=0;i<etapa.numeros;i++){
     if(i === 0){
@@ -77,8 +79,14 @@ function clicou(n){
 }
 
 //Funções dos botões de controle
-function branco(n){
-  alert("Clicou em Branco");
+function branco(){
+  if(numero === ''){
+    votoBranco = true;
+    seuVotoPara.style.display = 'block';
+    aviso.style.display = 'block';
+    numeros.innerHTML = '';
+    descricao.innerHTML = '<div class="aviso--grande pisca">VOTO EM BRANCO</div>';
+  }
 }
 
 function corrige(n){
