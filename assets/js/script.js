@@ -30,7 +30,7 @@ function comecarEtapa(){
   descricao.innerHTML = '';
   aviso.style.display = 'none';
   lateral.innerHTML ='';
-  numeros.innerHTML = numeroHtml;
+  numeros.innerHTML = numeroHtml;   
 }
 
 function atualizaInterface(){
@@ -80,7 +80,7 @@ function clicou(n){
       atualizaInterface();
     }
   }
-}
+} 
 
 //Funções dos botões de controle
 function branco(){
@@ -91,7 +91,7 @@ function branco(){
     numeros.innerHTML = '';
     descricao.innerHTML = '<div class="aviso--grande pisca">VOTO EM BRANCO</div>';
     lateral.innerHTML = '';
-  }  
+  }   
 
 function corrige(){
   comecarEtapa();
@@ -103,7 +103,7 @@ function confirma(){
 
   if(votoBranco === true){
     votoConfirmado = true;
-    console.log("Confirmando voto em BRANCO...");
+    console.log("Confirmando como BRANCO...");
   }else if(numero.length === etapa.numeros){
     votoConfirmado = true;
     console.log("Confirmando como "+numero);
@@ -113,9 +113,9 @@ function confirma(){
     if(etapas[etapaAtual] !== undefined){
       comecarEtapa();
     }else{
-      console.log("FIM!");
+      document.querySelector(".tela").innerHTML = '<div class="aviso-gigante pisca">FIM</div>';
     }
   }
-}
+}  
 
 comecarEtapa();
