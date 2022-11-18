@@ -10,7 +10,7 @@
 
 <p>Objetivo de criar o projeto urna eletrônica é melhorar meus conhecimentos nas tecnologias que estou 
 focado HTML, CSS e JavaScript, esse projeto tem algumas funcionalidades como atualizar as informações na tela de acordo com o número do candidato escolhido.
-Também existe a as funcionalidades de corrigir o voto caso erre o número desejado, opção de voto em branco e para concluir o voto basta clicar no botão 
+Também existe as funcionalidades de corrigir o voto caso erre o número desejado, opção de voto em branco e para concluir o voto basta clicar no botão 
 confirmar que o sistema finaliza a votação e mostra a palavra fim na tela.</p>
 
 <h1>Aprendizados</h1>
